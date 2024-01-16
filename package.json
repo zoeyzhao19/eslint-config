@@ -1,0 +1,66 @@
+{
+  "name": "@zls/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/zoeyzhao19/eslint-config#readme",
+  "bugs": "https://github.com/zoeyzhao19/eslint-config/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeyzhao19/eslint-config.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint --fix ./src/**",
+    "prepare": "husky install",
+    "release": "vitest run && changelogen --release && git push --follow-tags && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/eslint": "^8.56.2",
+    "changelogen": "^0.5.5",
+    "commitlint": "^18.4.3",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.6"
+  },
+  "packageManager": "pnpm@7.33.6"
+}
