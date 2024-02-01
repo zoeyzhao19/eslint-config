@@ -1,3 +1,1 @@
-import { foo } from './foo'
-
-export { foo }
+export * from './configs';
