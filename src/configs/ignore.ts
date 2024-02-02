@@ -1,4 +1,4 @@
-import type {EslintFlatConfig} from '../types'
+import type { EslintFlatConfig } from '../types';
 
 export const GLOB_IGNORES = [
   '**/node_modules',
@@ -29,18 +29,18 @@ export const GLOB_IGNORES = [
   '**/*.min.*',
   '**/LICENSE*',
   '**/__snapshots__',
-]
+];
 
 interface IgnoreOptions {
-  globIgnores?: EslintFlatConfig['ignores']
+  globIgnores?: EslintFlatConfig['ignores'];
 }
 
 export function ignores(options: IgnoreOptions = {}): EslintFlatConfig[] {
-  const {globIgnores = []} = options
+  const { globIgnores = [] } = options;
 
   return [
     {
-      ignores: [...GLOB_IGNORES, ...globIgnores]
-    }
-  ]
-} 
+      ignores: [...GLOB_IGNORES, ...globIgnores],
+    },
+  ];
+}

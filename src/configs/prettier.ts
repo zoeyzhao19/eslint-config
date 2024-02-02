@@ -1,11 +1,26 @@
 import type { EslintFlatConfig } from '../types';
-import { RequiredOptions as PrettierLinterOptions } from 'prettier';
+import type { RequiredOptions as PrettierLinterOptions } from 'prettier';
 
 export interface PrettierOptions {
   overrides?: PrettierLinterOptions;
 }
 
-export async function prettier(options: PrettierOptions = {}): Promise<EslintFlatConfig<PrettierLinterOptions, {}>[]> {
+// TODO use stylistic rules
+export async function prettier(
+  options: PrettierOptions = {},
+): Promise<EslintFlatConfig<object, PrettierLinterOptions>[]> {
+  const {
+    overrides = {
+      printWidth: 120,
+      tabWidth: 2,
+      useTabs: false,
+      semi: true,
+      singleQuote: true,
+      jsxSingleQuote: false,
+      endOfLine: 'lf',
+    },
+  } = options;
+
   const eslintPluginPrettierRecommended = await import('eslint-plugin-prettier/recommended');
 
   return [
@@ -17,7 +32,7 @@ export async function prettier(options: PrettierOptions = {}): Promise<EslintFla
         'prettier/prettier': [
           'error',
           {
-            ...options.overrides,
+            ...overrides,
           },
         ],
       },

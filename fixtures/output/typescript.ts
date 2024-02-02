@@ -9,4 +9,4 @@ if (false) {
   console.log('hello');
 }
 
-const b:Boolean = false
+const b: boolean = false;

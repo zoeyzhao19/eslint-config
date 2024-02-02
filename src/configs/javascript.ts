@@ -1,14 +1,13 @@
 import globals from 'globals';
 import { pluginUnusedImports } from '../plugins';
 import type { EslintFlatConfig } from '../types';
-import type { ESLintRules as JavaScriptRules } from 'eslint/rules';
 import type { Linter } from 'eslint';
 
 export interface JavascriptOptions {
   overrides?: EslintFlatConfig['rules'];
 }
 
-export function javascript(options: JavascriptOptions = {}): EslintFlatConfig<JavaScriptRules, Linter.ParserOptions>[] {
+export function javascript(options: JavascriptOptions = {}): EslintFlatConfig<Linter.ParserOptions>[] {
   const { overrides = {} } = options;
 
   return [
