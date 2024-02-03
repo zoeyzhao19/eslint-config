@@ -24,7 +24,7 @@ export async function prettier(
 
   return [
     {
-      ...eslintPluginPrettierRecommended,
+      ...(eslintPluginPrettierRecommended.default ?? eslintPluginPrettierRecommended),
       rules: {
         ...eslintPluginPrettierRecommended.rules,
         // TODO type inference
