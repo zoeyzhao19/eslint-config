@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.3...v0.0.4)
+
+### 🩹 Fixes
+
+- Npm publish ([e521c76](https://github.com/zoeyzhao19/eslint-config/commit/e521c76))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.2...v0.0.3)
