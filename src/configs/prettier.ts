@@ -5,7 +5,6 @@ export interface PrettierOptions {
   overrides?: PrettierLinterOptions;
 }
 
-// TODO use stylistic rules
 export async function prettier(
   options: PrettierOptions = {},
 ): Promise<EslintFlatConfig<object, PrettierLinterOptions>[]> {

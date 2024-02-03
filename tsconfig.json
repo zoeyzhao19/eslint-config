@@ -5,16 +5,14 @@
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true,
-    "skipDefaultLibCheck": true,
     "skipLibCheck": true,
   },
   "include": [
     "**/*.ts"
   ],
   "exclude": [
-    "./fixtures/input/*.*"
+    "./fixtures/**"
   ]
 }

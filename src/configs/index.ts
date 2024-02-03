@@ -1,11 +1,11 @@
 import { isPackageExists } from 'local-pkg';
 import type { EslintFlatConfig } from '../types';
-import { javascript } from './javascript';
-import { prettier } from './prettier';
-import type { JavascriptOptions } from './javascript';
 import type { PrettierOptions } from './prettier';
-import { ignores } from './ignore';
+import type { JavascriptOptions } from './javascript';
+import { prettier } from './prettier';
 import type { TypescriptOptions } from './typescript';
+import { javascript } from './javascript';
+import { ignores } from './ignore';
 import { typescript } from './typescript';
 import { imports } from './imports';
 

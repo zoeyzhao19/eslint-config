@@ -1,5 +1,5 @@
-import { pluginImport } from '../plugins';
 import type { EslintFlatConfig } from '../types';
+import { pluginImport } from '../plugins';
 
 export async function imports(): Promise<EslintFlatConfig[]> {
   return [
