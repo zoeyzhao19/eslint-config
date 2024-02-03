@@ -23,7 +23,7 @@ jobs:
         run: pnpm install
 
       - name: build
-        run: nr build
+        run: pnpm build
       
       - name: lint
         run: pnpm lint
