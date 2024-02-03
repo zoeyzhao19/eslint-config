@@ -1,5 +1,5 @@
-import type { EslintFlatConfig } from '../types';
 import type { RequiredOptions as PrettierLinterOptions } from 'prettier';
+import type { EslintFlatConfig } from '../types';
 
 export interface PrettierOptions {
   overrides?: PrettierLinterOptions;

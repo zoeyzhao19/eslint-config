@@ -1,9 +1,9 @@
-import type { EslintFlatConfig } from '../types';
-import { toArray } from '../utils';
 import type {
   RuleOptions as TypeScriptRules,
   ParserOptions as TypescriptParserOptions,
 } from '@eslint-types/typescript-eslint/types';
+import type { EslintFlatConfig } from '../types';
+import { toArray } from '../utils';
 
 export interface TypescriptOptions {
   overrides?: EslintFlatConfig<TypeScriptRules>['rules'];

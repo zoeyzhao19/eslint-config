@@ -1,7 +1,7 @@
 import globals from 'globals';
+import type { Linter } from 'eslint';
 import { pluginUnusedImports } from '../plugins';
 import type { EslintFlatConfig } from '../types';
-import type { Linter } from 'eslint';
 
 export interface JavascriptOptions {
   overrides?: EslintFlatConfig['rules'];
@@ -67,7 +67,6 @@ export function javascript(options: JavascriptOptions = {}): EslintFlatConfig<Li
         'no-dupe-else-if': 'error',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': 'error',
         'no-empty-character-class': 'error',
         'no-empty-pattern': 'error',
         'no-ex-assign': 'error',

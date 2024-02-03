@@ -1,12 +1,13 @@
+import { isPackageExists } from 'local-pkg';
+import type { EslintFlatConfig } from '../types';
 import { javascript } from './javascript';
 import { prettier } from './prettier';
-import type { EslintFlatConfig } from '../types';
 import type { JavascriptOptions } from './javascript';
 import type { PrettierOptions } from './prettier';
-import { isPackageExists } from 'local-pkg';
 import { ignores } from './ignore';
 import type { TypescriptOptions } from './typescript';
 import { typescript } from './typescript';
+import { imports } from './imports';
 
 interface Options {
   prettier?: boolean | PrettierOptions;
@@ -39,6 +40,8 @@ export async function zls(options: Options): Promise<EslintFlatConfig[]> {
   if (typescriptOptions) {
     configs.push(await typescript(typescriptOptions));
   }
+
+  configs.push(await imports());
 
   return configs.flat();
 }
