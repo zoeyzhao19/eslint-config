@@ -18,6 +18,15 @@ jobs:
         with:
           node-version: 16
           cache: 'pnpm'
-      - run: pnpm install
-      # - run: pnpm lint
-      - run: pnpm test
+
+      - name: install
+        run: pnpm install
+
+      - name: build
+        run: nr build
+      
+      - name: lint
+        run: pnpm lint
+
+      - name: test
+        run: pnpm test
