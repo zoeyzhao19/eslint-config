@@ -1,6 +1,6 @@
 {
   "name": "@zls/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple eslint config for personal usage",
   "keywords": [
     "eslint",
