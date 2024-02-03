@@ -22,6 +22,7 @@ export async function zls(options: Options): Promise<EslintFlatConfig[]> {
     prettier: enablePrettier,
     typescript: enableTypescript = isPackageExists('typescript'),
   } = options;
+
   const configs: EslintFlatConfig[][] = [];
 
   if (ignores) {

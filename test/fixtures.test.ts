@@ -14,7 +14,7 @@ afterAll(async () => {
 describe('fixtures', () => {
   test('fixed by eslint', async () => {
     const source = resolve('fixtures/input');
-    const temp = resolve('_fixtures', 'javascript');
+    const temp = resolve('_fixtures');
     const output = resolve('fixtures/output');
     await fs.copy(source, temp, {
       filter: (src) => !src.includes('node_modules'),
@@ -35,7 +35,7 @@ describe('fixtures', () => {
       stdio: 'pipe',
     });
 
-    const files = await fg.glob('**/*.js', {
+    const files = await fg.glob('**/*.*', {
       cwd: temp,
       ignore: ['node_modules', 'eslint.config.js'],
     });
@@ -46,5 +46,5 @@ describe('fixtures', () => {
         await expect.soft(content).toMatchFileSnapshot(join(output, file));
       }),
     );
-  });
+  }, 30_000);
 });

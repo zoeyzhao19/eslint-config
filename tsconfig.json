@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
+    "target": "es2020",
+    "baseUrl": ".",
+    "module": "es2020",
     "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "strict": true,
-    "strictNullChecks": true,
-    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
     "**/*.ts"
   ],
   "exclude": [
-    "./fixtures/**"
+    "./fixtures/**/*.*",
   ]
 }
