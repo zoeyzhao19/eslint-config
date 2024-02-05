@@ -18,3 +18,5 @@ export interface EslintFlatConfig<P = Record<string, any>, R = Rules>
     : never;
   languageOptions?: Omit<Required<Linter.FlatConfig>['languageOptions'], 'parserOptions'> & { parserOptions?: P };
 }
+
+export type Awaitable<T> = T | Promise<T>;

@@ -23,7 +23,7 @@ describe('fixtures', () => {
     await fs.writeFile(
       join(temp, 'eslint.config.js'),
       `
-    import {zls} from '@zls/eslint-config';
+    import {zls} from '@zoeyzhao19/eslint-config';
 
     export default zls({});
     

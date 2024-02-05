@@ -3,7 +3,7 @@ import type {
   ParserOptions as TypescriptParserOptions,
 } from '@eslint-types/typescript-eslint/types';
 import type { EslintFlatConfig } from '../types';
-import { toArray } from '../utils';
+import { toArray, interopDefault } from '../utils';
 
 export interface TypescriptOptions {
   overrides?: EslintFlatConfig<TypeScriptRules>['rules'];
@@ -42,16 +42,15 @@ export async function typescript(
   const tsconfigPath = options?.tsconfigPath ? toArray(options.tsconfigPath) : undefined;
 
   const [pluginTs, parseTs] = await Promise.all([
-    import('@typescript-eslint/eslint-plugin'),
-    import('@typescript-eslint/parser'),
+    interopDefault(import('@typescript-eslint/eslint-plugin')),
+    interopDefault(import('@typescript-eslint/parser')),
   ]);
 
   return [
     {
       files: ['**/*.?([cm])[jt]s?(x)'],
-      // files: ['**/*.ts'],
       languageOptions: {
-        parser: (parseTs.default ?? parseTs) as any,
+        parser: parseTs as any,
         parserOptions: {
           extraFileExtensions: componentExts.map((ext) => `.${ext}`),
           ...(tsconfigPath
@@ -63,7 +62,7 @@ export async function typescript(
         },
       },
       plugins: {
-        '@typescript-eslint': (pluginTs.default ?? pluginTs) as any,
+        '@typescript-eslint': pluginTs as any,
       },
       rules: {
         '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
