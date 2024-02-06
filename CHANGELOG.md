@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.6...v0.0.7)
+
+### 🩹 Fixes
+
+- Default options ([960fc97](https://github.com/zoeyzhao19/eslint-config/commit/960fc97))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.6
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.5...v0.0.6)
