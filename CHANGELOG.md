@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.4...v0.0.5)
+
+### 🚀 Enhancements
+
+- Vue rules ([2436bbe](https://github.com/zoeyzhao19/eslint-config/commit/2436bbe))
+
+### 🩹 Fixes
+
+- Temporary disable lint in ci ([f13405f](https://github.com/zoeyzhao19/eslint-config/commit/f13405f))
+- Ci ([fcb7bc6](https://github.com/zoeyzhao19/eslint-config/commit/fcb7bc6))
+- Build in ci ([ce17887](https://github.com/zoeyzhao19/eslint-config/commit/ce17887))
+
+### 🏡 Chore
+
+- Vue rules WIP ([0b6d29a](https://github.com/zoeyzhao19/eslint-config/commit/0b6d29a))
+- Turn off  newline rules in vue template ([e90a4be](https://github.com/zoeyzhao19/eslint-config/commit/e90a4be))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.3...v0.0.4)
