@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.8
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.7...v0.0.8)
+
+### 🩹 Fixes
+
+- InteropDefault eslint-plugin-prettier ([011237f](https://github.com/zoeyzhao19/eslint-config/commit/011237f))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.6...v0.0.7)
