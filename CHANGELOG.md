@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.5...v0.0.6)
+
+### 🏡 Chore
+
+- Set eslint in peerDependencies ([6346ea1](https://github.com/zoeyzhao19/eslint-config/commit/6346ea1))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.4...v0.0.5)
