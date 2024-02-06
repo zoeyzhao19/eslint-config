@@ -131,6 +131,8 @@ export async function vue(options: VueOptions = {}): Promise<EslintFlatConfig[]>
         'vue/template-curly-spacing': 'error',
 
         'vue/comment-directive': 'off',
+        'vue/singleline-html-element-content-newline': 'off',
+        'vue/multiline-html-element-content-newline': 'off',
         ...overrides,
       },
     },
