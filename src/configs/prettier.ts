@@ -1,4 +1,5 @@
 import type { RequiredOptions as PrettierLinterOptions } from 'prettier';
+import { interopDefault } from '../utils';
 import type { EslintFlatConfig } from '../types';
 
 export interface PrettierOptions {
@@ -18,11 +19,11 @@ export async function prettier(
     },
   } = options;
 
-  const eslintPluginPrettierRecommended = await import('eslint-plugin-prettier/recommended');
+  const eslintPluginPrettierRecommended = await interopDefault(import('eslint-plugin-prettier/recommended'));
 
   return [
     {
-      ...(eslintPluginPrettierRecommended.default ?? eslintPluginPrettierRecommended),
+      ...eslintPluginPrettierRecommended,
       rules: {
         ...eslintPluginPrettierRecommended.rules,
         // TODO type inference
