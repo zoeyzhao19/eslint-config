@@ -20,7 +20,7 @@ interface Options {
 
 const VuePackages = ['vue', 'nuxt', 'vitepress', '@slidev/cli'];
 
-export async function zls(options: Options): Promise<EslintFlatConfig[]> {
+export async function zls(options: Options = {}): Promise<EslintFlatConfig[]> {
   const {
     ignores: globIgnores,
     prettier: enablePrettier,
