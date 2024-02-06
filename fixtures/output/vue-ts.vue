@@ -23,8 +23,7 @@ const incrementCounter = () => {
 <template>
   <div>
     <h1>{{ greeting }}</h1>
-    <button @click="incrementCounter">
-Click me!</button>
+    <button @click="incrementCounter">Click me!</button>
     <p>Counter: {{ counter }}</p>
   </div>
 </template>

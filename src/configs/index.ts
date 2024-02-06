@@ -36,11 +36,6 @@ export async function zls(options: Options): Promise<EslintFlatConfig[]> {
 
   configs.push(javascript(options.javascript));
 
-  const prettierOptions = enablePrettier === false ? false : typeof enablePrettier === 'object' ? enablePrettier : {};
-  if (prettierOptions) {
-    configs.push(await prettier(prettierOptions));
-  }
-
   const typescriptOptions =
     enableTypescript === false ? false : typeof enableTypescript === 'object' ? enableTypescript : {};
   if (typescriptOptions) {
@@ -55,6 +50,11 @@ export async function zls(options: Options): Promise<EslintFlatConfig[]> {
         typescript: !!enableTypescript,
       }),
     );
+  }
+
+  const prettierOptions = enablePrettier === false ? false : typeof enablePrettier === 'object' ? enablePrettier : {};
+  if (prettierOptions) {
+    configs.push(await prettier(prettierOptions));
   }
 
   configs.push(await imports());
