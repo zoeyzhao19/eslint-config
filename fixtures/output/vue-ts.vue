@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 
 defineOptions({
-  name: 'VueTs',
+  name: 'vue-ts',
 });
 
 defineProps({
