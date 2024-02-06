@@ -34,6 +34,18 @@ export async function zls(options: Options = {}): Promise<EslintFlatConfig[]> {
     configs.push(ignores({ globIgnores }));
   }
 
+  // prettier默认关闭了其他插件（typescript, vue等）部分可能存在冲突的样式规则，
+  // 虽然大部分情况下不会再产生冲突，但是仍将prettier插件优先应用，才能允许后续插件重新打开自己的样式规则（不至于被覆盖）
+  // 如果插件重新打开的样式规则与prettier产生冲突，则建议关闭，以prettier样式规则为准 （因为prettier比较固执，可能无法关闭）。
+  const prettierOptions = enablePrettier === false ? false : typeof enablePrettier === 'object' ? enablePrettier : {};
+  if (prettierOptions) {
+    configs.push(
+      await prettier({
+        ...prettierOptions,
+      }),
+    );
+  }
+
   configs.push(javascript(options.javascript));
 
   const typescriptOptions =
@@ -50,11 +62,6 @@ export async function zls(options: Options = {}): Promise<EslintFlatConfig[]> {
         typescript: !!enableTypescript,
       }),
     );
-  }
-
-  const prettierOptions = enablePrettier === false ? false : typeof enablePrettier === 'object' ? enablePrettier : {};
-  if (prettierOptions) {
-    configs.push(await prettier(prettierOptions));
   }
 
   configs.push(await imports());
