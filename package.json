@@ -80,6 +80,9 @@
     "vitest": "^0.34.6",
     "vue": "^3.4.15"
   },
+  "peerDependencies": {
+    "eslint": ">=8.40.0"
+  },
   "packageManager": "pnpm@7.33.6",
   "publishConfig": {
     "access": "public"
