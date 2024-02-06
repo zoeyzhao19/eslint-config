@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.9
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.8...v0.0.9)
+
+### 🩹 Fixes
+
+- Apply prettier rules  priorly ([91b5a48](https://github.com/zoeyzhao19/eslint-config/commit/91b5a48))
+
+### 🏡 Chore
+
+- Update fixture ([f8c79f8](https://github.com/zoeyzhao19/eslint-config/commit/f8c79f8))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.7...v0.0.8)
