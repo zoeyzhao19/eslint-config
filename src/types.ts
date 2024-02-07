@@ -15,7 +15,7 @@ export interface EslintFlatConfig<P = Record<string, any>, R = RuleOptions>
   extends Omit<Linter.FlatConfig, 'rules' | 'languageOptions'> {
   rules?: R extends Record<string, any>
     ? {
-        [K in keyof R]?: Linter.RuleEntry<R[K]>;
+        [K in keyof R]?: R[K] extends Linter.RuleEntry ? R[K] : Linter.RuleEntry<R[K]>;
       }
     : never;
   languageOptions?: Omit<Required<Linter.FlatConfig>['languageOptions'], 'parserOptions'> & { parserOptions?: P };

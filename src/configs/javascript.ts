@@ -46,6 +46,7 @@ export function javascript(options: JavascriptOptions = {}): EslintFlatConfig<Li
         'array-callback-return': [
           'error',
           {
+            // @ts-expect-error missing types
             checkForEach: true,
           },
         ],
