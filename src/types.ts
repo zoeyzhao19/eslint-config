@@ -1,15 +1,17 @@
 import type { Linter } from 'eslint';
 import type { ESLintRules as JavaScriptRules } from 'eslint/rules';
 import type { RuleOptions as TypeScriptRules } from '@eslint-types/typescript-eslint/types';
+import type { RequiredOptions as PrettierLinterOptions } from 'prettier';
 
-export type Rules = JavaScriptRules & TypeScriptRules;
-
-// type DefaultParserOptions =
+export type RuleOptions = JavaScriptRules &
+  TypeScriptRules & {
+    'prettier/prettier': [PrettierLinterOptions];
+  };
 
 /**
  * @see https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects
  */
-export interface EslintFlatConfig<P = Record<string, any>, R = Rules>
+export interface EslintFlatConfig<P = Record<string, any>, R = RuleOptions>
   extends Omit<Linter.FlatConfig, 'rules' | 'languageOptions'> {
   rules?: R extends Record<string, any>
     ? {

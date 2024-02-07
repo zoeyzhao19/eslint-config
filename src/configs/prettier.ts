@@ -6,9 +6,7 @@ export interface PrettierOptions {
   overrides?: PrettierLinterOptions;
 }
 
-export async function prettier(
-  options: PrettierOptions = {},
-): Promise<EslintFlatConfig<object, PrettierLinterOptions>[]> {
+export async function prettier(options: PrettierOptions = {}): Promise<EslintFlatConfig<object>[]> {
   const {
     overrides = {
       printWidth: 120,
@@ -16,7 +14,7 @@ export async function prettier(
       semi: true,
       singleQuote: true,
       endOfLine: 'lf',
-    },
+    } as PrettierLinterOptions,
   } = options;
 
   const eslintPluginPrettierRecommended = await interopDefault(import('eslint-plugin-prettier/recommended'));
