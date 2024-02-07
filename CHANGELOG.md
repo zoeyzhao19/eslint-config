@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.10
+
+[compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.9...v0.0.10)
+
+### 🏡 Chore
+
+- Improve types ([a2c287b](https://github.com/zoeyzhao19/eslint-config/commit/a2c287b))
+- Improve types ([80863e9](https://github.com/zoeyzhao19/eslint-config/commit/80863e9))
+
+### ❤️ Contributors
+
+- 赵龙生 <zoeyzhao19@gmail.com>
+
 ## v0.0.9
 
 [compare changes](https://github.com/zoeyzhao19/eslint-config/compare/v0.0.8...v0.0.9)
