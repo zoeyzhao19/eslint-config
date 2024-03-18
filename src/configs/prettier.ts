@@ -24,7 +24,6 @@ export async function prettier(options: PrettierOptions = {}): Promise<EslintFla
       ...eslintPluginPrettierRecommended,
       rules: {
         ...eslintPluginPrettierRecommended.rules,
-        // TODO type inference
         'prettier/prettier': [
           'error',
           {
