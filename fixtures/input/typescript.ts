@@ -1,13 +1,4 @@
-// #eslint-ignore unused-imports
-import type { RequiredOptions as PrettierLinterOptions } from 'prettier';
-import type { RuleOptions as TypeScriptRules } from '@eslint-types/typescript-eslint/types';
-import type { Linter } from 'eslint';
-import type { ESLintRules as JavaScriptRules } from 'eslint/rules';
-
-let _a:PrettierLinterOptions
-let _b:TypeScriptRules
-let _c:Linter
-let _d:JavaScriptRules
+// Define a TypeScript interfacez
 interface Person { 
   name: string; age: number;
 }

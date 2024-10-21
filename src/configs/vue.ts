@@ -1,5 +1,5 @@
-import { interopDefault } from '../utils';
 import type { EslintFlatConfig } from '../types';
+import { interopDefault } from '../utils';
 
 export interface VueOptions {
   typescript?: boolean;
