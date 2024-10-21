@@ -10,7 +10,6 @@ export async function vue(options: VueOptions = {}): Promise<EslintFlatConfig[]>
   const { overrides = {}, vueVersion = 3 } = options;
 
   const [pluginVue, parserVue] = await Promise.all([
-    // @ts-expect-error missing types
     interopDefault(import('eslint-plugin-vue')),
     interopDefault(import('vue-eslint-parser')),
   ]);
