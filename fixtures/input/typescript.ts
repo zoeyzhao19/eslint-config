@@ -1,4 +1,4 @@
-// Define a TypeScript interfacez
+// Define a TypeScript interface
 interface Person { 
   name: string; age: number;
 }
